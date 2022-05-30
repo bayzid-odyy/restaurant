@@ -30,7 +30,7 @@ html{
     margin-left: 35px;
 }
 #logo img{
-    width: 60px;
+    width: 100px;
 }
 #nav_links{
     width: 60%;
@@ -51,7 +51,7 @@ html{
 #nav_links ul li a{
     text-decoration: none;
     color: black;
-    font-size: 1rem;
+    font-size: 1.5rem;
     transition: 0.2s ease;
 }
 #nav_links ul li a:hover{
