@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=EB+Garamond:ital@1&family=Nunito:ital,wght@0,200;1,300&family=Tiro+Kannada&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tiro Kannada', serif;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* navbar */
+
+#navbar{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 1px 5px 0px black;
+    overflow: hidden;
+    position: relative;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35px;
+}
+#logo img{
+    width: 60px;
+}
+#nav_links{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav_links ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+#nav_links ul li{
+    list-style-type: none;
+}
+#nav_links ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    transition: 0.2s ease;
+}
+#nav_links ul li a:hover{
+    color: rgb(0, 175, 88);
+}
+#bar{
+    cursor: pointer;
+    position: absolute;
+    right: 40px;
+    z-index: 999;
+    display: none;;
+}
+#bar i{
+    font-size: 1.4rem;
+
+}
+
+@media screen and (max-width: 768px){
+    #bar{
+        display: block;
+    }
+   #nav_links{
+       width: 80%;
+       height: 80vh;
+       background-color: rgba(223, 211, 211, 0.9);
+       position: fixed;
+       top: 0px;
+       right: 0px;
+       margin-right: -700px;
+       transition: 0.3s ease;
+   }
+   #nav_links ul{
+       height: 80%;
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-between;
+   }
+   #nav_links ul li a{
+       font-size: 0.9rem;
+   }
+   #nav_links.active{
+       margin-right: 0px;
+   }
+}
+
+/* hero section */
+
+#hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#hero_left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#hero_left h1{
+    margin-bottom: 15px;
+    font-size: 3.1rem;
+    color: rgb(0, 175, 88);
+}
+#hero_left p{
+    margin: 20px;
+    font-size: 1rem;
+}
+#hero_right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#hero_right img{
+    width: 80%;
+    height: 60%;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 0px black;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    #hero{
+        height: 70vh;
+    }
+}
+@media screen and (max-width: 500px) {
+    #hero{
+        height: auto;
+       
+    }
+    #hero_left h1{
+        font-size: 2rem;
+        margin: 10px;
+    }
+    
+    #hero_left{
+        width: 100%;
+    }
+    #hero_right{
+        overflow: hidden;
+    }
+
+}
+
+
+/* services */
+
+#services{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+#all_serv{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#serv_box{
+    width: 120px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgb(236, 236, 236);
+    justify-content: space-between;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 0px black;
+}
+#serv_box i{
+    font-size: 2.7rem;
+    color:rgb(0, 175, 88);
+}
+#serv_box p{
+    line-height: 18px;
+}
+#serv_daag{
+    width: 50%;
+    height: 1.5px;
+    background-color: green;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 500px){
+    #all_serv{
+        width: 100%;
+    }
+    #serv_box{
+        width: 100px;
+        height: 120px;
+        margin: 10px;
+    }
+    #serv_box i{
+        font-size: 1.9rem;
+    }
+    #serv_box p{
+        font-size: 0.9rem;
+    }
+}
+
+/* dishes */
+
+#dishes{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#dishes h1{
+    margin-bottom: 8px;
+}
+#hot_dsh{
+    width: 95%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#dsh_box{
+    width: 180px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px 1px black;
+}
+#sub_dsh{
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: space-between;
+}
+#sub_dsh button{
+    border: none;
+    padding: 2px 14px;
+    background-color: rgb(0, 175, 88);
+    border-radius: 5px;
+    color: #fff;
+    transition: 0.2s ease;
+    box-shadow: 1px 2px 2px 0px rgb(80, 67, 49);
+}
+#sub_dsh button:hover{
+    cursor: pointer;
+    background-color: rgb(0, 131, 65);
+    transform: scale(1.1)
+}
+#dsh_box img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width: 500px){
+    #hot_dsh{
+        width: 100%;
+    }
+    #dsh_box{
+        width: 150px;
+        height: 190px;
+        margin: 10px;
+    }
+    #sub_dsh{
+        width: 80%;
+    }
+}
+/* other dishes */
+
+#other_dsh{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#other_dsh h1{
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+#otr_dishes{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#otr_box{
+    width: 170px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 1px 3px 4px 1px black;
+    border-radius: 10px;
+}
+#otr_box img{
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 500px){
+    #otr_box{
+        width: 130px;
+        height: 170px;
+        margin: 10px;
+    }
+    #otr_box h3{
+        font-size: 1rem;
+    }
+
+}
+
+/* desert */
+
+#desert{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#desert h1{
+    margin: 30px;
+}
+#all_dsrt{
+    width: 95%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#dsrt_box{
+    width: 150px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#dsrt_box img{
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 1px 2px 3px 0px black;
+    margin: 10px;
+}
+
+/* chef */
+
+#chef{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+#chef_h1{
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+
+}
+#chef a{
+    width: 150px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+#chef a img{
+    width: 60%;
+    height: auto;
+    border-radius: 50%;
+}
+#chef a p{
+    text-decoration: none;
+    color:rgb(0, 175, 88);
+}
+
+
+@media screen and (max-width: 500px){
+    #chef a{
+        width: 100px;
+        margin: 10px;
+    }
+}
+
+/* reservation */
+
+#reservation{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#reservation h1{
+    margin: 20px;
+}
+#form{
+    background-color: rgb(134, 134, 134);
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px 0px black;
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+#left_form{
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+#right_form{
+    width: 50%;
+    display: flex;
+    align-items:  flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+#right_form input{
+    padding: 8px 20px;
+    margin: 15px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 0px black;
+}
+#left_form select{
+    padding: 8px 20px;
+    margin: 15px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 0px black;
+}
+
+#right_form button{
+    width: 80px;
+    margin: 15px;
+    padding: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    background-color: rgb(6, 158, 70);
+    color: #fff;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 0px black;
+    transition: 0.3s ease;
+}
+#right_form button:hover{
+    cursor: pointer;
+    background-color: rgb(89, 139, 77);
+
+}
+
+@media screen and (max-width: 500px){
+    #form{
+        width: 95%;
+    }
+}
+
+/* footer */
+
+#footer{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
