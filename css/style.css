@@ -272,6 +272,7 @@ html{
     display: flex;
     width: 60%;
     align-items: center;
+    overflow: hidden;
     justify-content: space-between;
 }
 #sub_dsh button{
